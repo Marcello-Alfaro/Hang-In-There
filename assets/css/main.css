@@ -4,7 +4,7 @@
  * Author: Marcello Alfaro                                  * 
  * Email: marcello.alfaro1@gmail.com                        * 
  *                --------------------------                * 
- * Last Modified: Monday, 25th May 2020 7:29:29 pm          * 
+ * Last Modified: Monday, 1st June 2020 6:39:18 pm          * 
  * Modified By: Marcello Alfaro                             * 
  *                --------------------------                * 
  *                    Copyright (c) 2020                    * 
@@ -18,7 +18,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
@@ -3735,6 +3734,7 @@ button:hover {
     display: block;
     color: var(--theme-white);
     text-transform: uppercase;
+    width: max-content;
   }
 
   .w3l-banner-slider nav li {
@@ -3991,7 +3991,7 @@ h6 label.spl-ap-slider {
 }
 
 .w3l-banner-slider .banner-vv {
-  background: url(../images/covid-4.png) no-repeat center;
+  background: no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -4003,17 +4003,17 @@ h6 label.spl-ap-slider {
   padding-top: 12em;
 }
 
-.w3l-banner-slider .banner-top1 {
+/* .w3l-banner-slider .banner-top1 {
   background: url(../images/covid-1.jpg) no-repeat center;
-}
+} */
 
-.w3l-banner-slider .banner-top2 {
+/* .w3l-banner-slider .banner-top2 {
   background: url(../images/covid-2.jpg) no-repeat center;
-}
+} */
 
-.w3l-banner-slider .banner-top3 {
+/* .w3l-banner-slider .banner-top3 {
   background: url(../images/covid-10.jpg) no-repeat center;
-}
+} */
 
 .w3l-banner-slider .banner-vv:before {
   content: '';
@@ -4800,13 +4800,13 @@ h6 label.spl-ap-slider {
 
 .w3l-banner-slider .features-6-grids {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
   position: absolute;
   z-index: 9;
-  bottom: 100px;
+  bottom: 50px;
   margin: 0 auto;
-  width: 80%;
+  width: max-content;
 }
 
 .w3l-banner-slider .feature-images span {
@@ -4841,7 +4841,7 @@ h6 label.spl-ap-slider {
 }
 
 .w3l-banner-slider .inner-page-content {
-  background: url(../images/covid-3.jpg) no-repeat center;
+  background: no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -4914,11 +4914,11 @@ h6 label.spl-ap-slider {
 
   .w3l-banner-slider .features-6-grids {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 40px;
-    bottom: 65px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    bottom: 50px;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
   }
 
   .w3l-banner-slider .banner-vv {
@@ -4956,9 +4956,9 @@ h6 label.spl-ap-slider {
 
   .w3l-banner-slider .features-6-grids {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    bottom: 65px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    bottom: 50px;
     margin: 0 auto;
     width: 80%;
   }
@@ -5338,7 +5338,7 @@ h6 label.spl-ap-slider {
 
 .w3l-counter-top-6 #info.counter-6-inf-left {
   padding: 14em 7em;
-  background: url(../images/covid-virus.jpg) no-repeat 0px 0px;
+  background: no-repeat 0px 0px;
   background-size: cover;
   z-index: 0;
   position: relative;
@@ -5346,7 +5346,7 @@ h6 label.spl-ap-slider {
 
 .w3l-counter-top-6 #prevent.counter-6-inf-left {
   padding: 14em 7em;
-  background: url(../images/covid-prevent.jpg) no-repeat 0px 0px;
+  background: no-repeat 0px 0px;
   background-size: cover;
   z-index: 0;
   position: relative;
@@ -5449,7 +5449,7 @@ h6 label.spl-ap-slider {
 
 .w3l-counter-top-6 .specification p {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 26px;
   color: var(--theme-para);
   padding-right: 30px;
 }
@@ -5460,7 +5460,8 @@ h6 label.spl-ap-slider {
 
 @media all and (max-width: 1440px) {
   .w3l-counter-top-6 .specification p {
-    width: 70%;
+    width: 100%;
+    padding-right: 0;
   }
 
   .w3l-counter-top-6 .counter-6-inf-left {
@@ -5470,7 +5471,7 @@ h6 label.spl-ap-slider {
 
 @media all and (max-width: 1390px) {
   .w3l-counter-top-6 .specification p {
-    font-size: 15px;
+    font-size: 14px;
     padding-right: 0px;
   }
 
@@ -5495,12 +5496,19 @@ h6 label.spl-ap-slider {
     padding: 40px;
     width: 73%;
   }
+
+  .w3l-counter-top-6 .specification p {
+    font-size: 15px;
+    padding-right: 0px;
+    line-height: 20px;
+  }
 }
 
 @media all and (max-width: 1080px) {
   .w3l-counter-top-6 .specification p {
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .w3l-counter-top-6 .counter-6-inf-left {
@@ -5881,7 +5889,7 @@ h6 label.spl-ap-slider {
 }
 
 .w3l-donate-6 .donate-layout {
-  background: url(../images/covid-3.jpg) no-repeat;
+  background: no-repeat;
   background-position: center bottom;
   background-size: cover;
   clip-path: polygon(50% 0%, 100% 0, 100% 50%, 50% 100%, 50% 100%, 0 50%, 0 0);
@@ -5978,7 +5986,7 @@ h6 label.spl-ap-slider {
 }
 
 .w3l-get-add-team .get-6-content {
-  background: url(../images/g5.jpg) no-repeat center;
+  background: no-repeat center;
   clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
   background-size: cover;
   background-attachment: fixed;
@@ -6218,7 +6226,7 @@ li a.donateNow:hover {
 
   .w3l-blog-grids-6 ul.admin-list {
     padding: 6px 10px;
-    top: 76%;
+    top: 60%;
     left: 0;
   }
 
@@ -7595,6 +7603,15 @@ li a.donateNow:hover {
   .w3l-team-main-6 .team-content {
     padding: 70px 0;
   }
+
+  .w3l-blog-grids-6 ul.admin-list {
+    padding: 6px 9px;
+    top: 57%;
+  }
+
+  .w3l-stories-main .story-info h5 a {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -8730,7 +8747,7 @@ li a.donateNow:hover {
   width: 50%;
   float: left;
   text-align: center;
-  background: url(../images/g5.jpg) no-repeat center;
+  background: no-repeat center;
   background-size: cover;
   box-sizing: border-box;
   min-height: 100%;
@@ -8742,7 +8759,7 @@ li a.donateNow:hover {
   width: 50%;
   float: left;
   text-align: center;
-  background: url(../images/covid-3.jpg) no-repeat center;
+  background: no-repeat center;
   background-size: cover;
   box-sizing: border-box;
   min-height: 100%;
